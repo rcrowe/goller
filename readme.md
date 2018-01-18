@@ -25,6 +25,8 @@ cfg.RunOnce()
 worker := goller.NewFromConfig(svc, cfg)
 ```
 
+Checkout [spot](https://github.com/rcrowe/goller/tree/master/spot) if you want to use Goller on your spot instances.
+
 ### logging
 
 By default nothing is logged by Goller - don't you hate those libraries that log :rage: - But depending on your usecase it can be super helpful.

@@ -6,10 +6,10 @@ shared: &shared
     - checkout
     - run:
         name: Setup project
-        command: ./bin/setup
+        command: .circleci/bin/setup
     - run:
         name: Run tests
-        command: ./bin/test
+        command: .circleci/bin/test
 
 jobs:
   "golang-1.9.2":

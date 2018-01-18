@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -e
+
+echo "Running tests..."
+go test -race ./... -timeout 10s
+
+echo ""
+echo "Running linters..."
+gometalinter.v2 \
+    --vendor \
+    --deadline=5m \
+    ./...

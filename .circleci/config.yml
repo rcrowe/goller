@@ -1,0 +1,30 @@
+version: 2
+
+shared: &shared
+  working_directory: /go/src/github.com/rcrowe/goller
+  steps:
+    - checkout
+    - run:
+        name: Setup project
+        command: ./bin/setup
+    - run:
+        name: Run tests
+        command: ./bin/test
+
+jobs:
+  "golang-1.9.2":
+    <<: *shared
+    docker:
+      - image: circleci/golang:1.9.2
+
+  "golang-1.10":
+    <<: *shared
+    docker:
+      - image: circleci/golang:1.10-rc
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - "golang-1.9.2"
+      - "golang-1.10"

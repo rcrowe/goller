@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -e
+
+# Dep
+echo "Grabbing dependencies..."
+curl -L -o dep https://github.com/golang/dep/releases/download/v0.3.2/dep-linux-amd64 > /dev/null 2>&1
+chmod +x ./dep
+./dep ensure
+
+# Linting
+echo "Setting up linters..."
+go get -u gopkg.in/alecthomas/gometalinter.v2
+gometalinter.v2 --install > /dev/null 2>&1

@@ -1,4 +1,4 @@
-## package `goller`
+## package `goller` [![CircleCI](https://circleci.com/gh/rcrowe/goller.svg?style=svg)](https://circleci.com/gh/rcrowe/goller)
 
 Goller is a set of packages to make consuming from SQS silky smooth. You can
 get started with...

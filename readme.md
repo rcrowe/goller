@@ -1,4 +1,4 @@
-## package `goller`
+## package `goller` [![CircleCI](https://circleci.com/gh/rcrowe/goller.svg?style=svg)](https://circleci.com/gh/rcrowe/goller)
 
 Goller is a set of packages to make consuming from SQS silky smooth. You can
 get started with...
@@ -24,6 +24,8 @@ cfg.RunOnce()
 
 worker := goller.NewFromConfig(svc, cfg)
 ```
+
+Checkout [spot](https://github.com/rcrowe/goller/tree/master/spot) if you want to use Goller on your spot instances.
 
 ### logging
 

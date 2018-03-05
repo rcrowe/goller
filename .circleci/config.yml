@@ -20,7 +20,7 @@ jobs:
   "golang-1.10":
     <<: *shared
     docker:
-      - image: circleci/golang:1.10-rc
+      - image: circleci/golang:1.10
 
 workflows:
   version: 2
